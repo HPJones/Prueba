@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
         nombre1.setText(nombre.getText());
         nombre2.setText(passw.getText());
 
+        System.out.print("hola");
+
 
 
 
