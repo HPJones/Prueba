@@ -1,6 +1,7 @@
 package com.example.alumnot.prueba;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,25 +19,22 @@ public class MainActivity extends Activity {
 
 
 
+
+
     public void cambiar(View v){
         EditText nombre = (EditText) findViewById(R.id.editText);
         EditText passw = (EditText) findViewById(R.id.editText2);
 
 
+        Intent i = new Intent(MainActivity.this,actividad2.class);
 
-        TextView nombre1 = (TextView) findViewById(R.id.textView);
-        TextView nombre2 = (TextView) findViewById(R.id.textView2);
-
-
-        nombre1.setText(nombre.getText());
-        nombre2.setText(passw.getText());
-
-        System.out.print("hola");
-
-
-
+        i.putExtra("nombre",nombre.getText().toString());
+        i.putExtra("passd",passw.getText().toString());
+        startActivity(i);
 
     }
+
+
 
 
 }
